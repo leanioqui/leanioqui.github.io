@@ -87,15 +87,17 @@
         .card h3 {
             font-size: 28px;
             margin: 0 0 10px;
+            /* CLAVE: La caja ahora mide lo mismo que el texto */
+            display: inline-block;
             /* Cambiamos 'color' por 'all' para que la transición 
-               también afecte al fondo y al recorte del texto */
+               también afecte al fondo y al recorte del texto, Si no se pone esto, el color cambia "de golpe"  */
             transition: all 0.3s ease; 
         }
         
         /* 2. El nuevo efecto para Python (Gradiente Diagonal) */
         .card-python:hover h3 {
             /* Colores oficiales de Python en diagonal */
-            background: linear-gradient(135deg, #306998 50%, #FFE873 50%);
+            background: linear-gradient(135deg, #306998 50%, #FFD43B 50%);
             
             /* Recorte de fondo al texto */
             -webkit-background-clip: text;
@@ -105,8 +107,13 @@
             -webkit-text-fill-color: transparent;
             color: transparent;
             
-            /* Agregamos una sombra muy sutil para que no pierda legibilidad */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            /* Agregamos un filtro de drop-shadow sutil. 
+            A diferencia del text-shadow, este se aplica AL RECORTE del texto, 
+            haciendo que los colores "salten" más del fondo. */
+            filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.15));
+
+            /* Quitamos la sombra para que el corte diagonal sea nítido */
+            text-shadow: none;
         }
 
         /* 3. Cuando el padre 'card-cpp' está en hover, buscá su h3 y usá su color (#00599C) */
