@@ -79,10 +79,29 @@
             /* Opcional: Podés agregar una sombra sutil para dar efecto de profundidad */
             box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
+        /* --- Lógica de Colores Específicos para el Título en Hover --- */
+
+        /* 1. Definimos la transición en el H3 base para que el cambio de color sea suave.*/
 
         .card h3 {
             font-size: 28px;
             margin: 0 0 10px;
+            transition: color 0.3s ease;            /*Si no se pone esto, el color cambia "de golpe" */
+        }
+        
+        /* 2. Cuando el padre 'card-python' está en hover, buscá su h3 y cambiale el color al de tu badge (#3776AB) */
+        .card-python:hover h3 {
+            color: #3776AB;
+        }
+
+        /* 3. Cuando el padre 'card-cpp' está en hover, buscá su h3 y usá su color (#00599C) */
+        .card-cpp:hover h3 {
+            color: #00599C;
+        }
+
+        /* 4. Cuando el padre 'card-arduino' está en hover, buscá su h3 y usá su color (#00979D) */
+        .card-arduino:hover h3 {
+            color: #00979D;
         }
 
         /* SECCIÓN DE BOTONES */
@@ -118,15 +137,15 @@
         </section>
 
         <section class="grid">
-            <div class="card">
+            <div class="card card-python">
                 <h3>Python</h3>
                 <p>Gestión de Impacto Ambiental. Scrapping y base de datos SQLite.</p>
             </div>
-            <div class="card">
+            <div class="card card-cpp">
                 <h3>C++</h3>
                 <p>Algoritmos avanzados y estructuras de datos de la UTN.</p>
             </div>
-            <div class="card">
+            <div class="card card-arduino">
                 <h3>Arduino</h3>
                 <p>Lógica de control y automatización mediante sistemas embebidos.</p>
             </div>
