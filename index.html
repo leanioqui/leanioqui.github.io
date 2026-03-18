@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leandro Quintela | Sistemas & IA</title>
     <style>
+        /* DEFINICIÓN DE VARIABLES: Como en C++, definimos constantes para no repetir valores */
         :root {
             --apple-black: #1d1d1f;
             --apple-grey: #86868b;
@@ -13,20 +14,22 @@
 
         body {
             margin: 0;
+            /* SYSTEM STACK: Usa la fuente nativa del SO (San Francisco en Mac, Segoe en Win). 
+               Es lo que hace que la web parezca una "App" del sistema. */
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             background-color: #ffffff;
             color: var(--apple-black);
             line-height: 1.5;
+            /* Suavizado de tipografía para pantallas de alta densidad (Retina) */
             -webkit-font-smoothing: antialiased;
         }
 
         .container {
-            max-width: 980px;
+            max-width: 980px; /* Ancho estándar de las landing pages de Apple */
             margin: 0 auto;
             padding: 0 22px;
         }
 
-        /* Hero Section */
         #hero {
             padding: 120px 0 60px;
             text-align: center;
@@ -35,7 +38,7 @@
         h1 {
             font-size: 56px;
             font-weight: 700;
-            letter-spacing: -0.005em;
+            letter-spacing: -0.005em; /* Un ajuste milimétrico para que el título se vea más compacto */
             margin-bottom: 10px;
         }
 
@@ -45,25 +48,36 @@
             font-weight: 400;
         }
 
-        /* Projects Grid */
+        /* GRID: El cerebro del diseño responsive */
         .grid {
             display: grid;
+            /* LÓGICA INTELIGENTE: "Repetí columnas siempre que midan al menos 300px, 
+               sino, mandalas abajo". El '1fr' hace que ocupen el resto del espacio. */
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             margin-top: 80px;
         }
 
+        /* LAS CARDS: El contenedor de tus proyectos */
         .card {
             background: var(--apple-bg);
             padding: 40px;
-            border-radius: 28px;
-            transition: transform 0.3s ease;
+            border-radius: 28px; /* El radio de curvatura "squircle" típico de iOS */
+            
+            /* TRANSITION: Esta es la clave. Le dice al navegador: 
+               "Cualquier cambio de estilo (como el transform) hacelo en 0.3 segundos de forma suave". */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            
             text-decoration: none;
             color: inherit;
         }
 
+        /* EFECTO HOVER: Qué pasa cuando el mouse entra en el área de la card */
         .card:hover {
+            /* SCALE: Agranda la tarjeta un 2%. Al tener la 'transition' arriba, se ve fluido. */
             transform: scale(1.02);
+            /* Opcional: Podés agregar una sombra sutil para dar efecto de profundidad */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
         }
 
         .card h3 {
@@ -71,7 +85,7 @@
             margin: 0 0 10px;
         }
 
-        /* Buttons Section */
+        /* SECCIÓN DE BOTONES */
         .buttons {
             margin-top: 100px;
             text-align: center;
@@ -81,10 +95,11 @@
         .btn {
             display: inline-block;
             padding: 12px 22px;
-            border-radius: 980px;
+            border-radius: 980px; /* Botón tipo "pastilla" de Apple */
             font-weight: 400;
             text-decoration: none;
             margin: 10px;
+            /* Animación simple de opacidad */
             transition: opacity 0.2s ease;
         }
 
