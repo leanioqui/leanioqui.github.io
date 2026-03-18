@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leandro | Sistemas & IA</title>
+    <style>
+        /* CSS: El "ADN" visual de Apple */
+        :root {
+            --apple-black: #1d1d1f;
+            --apple-grey: #86868b;
+            --apple-bg: #f5f5f7;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #ffffff;
+            color: var(--apple-black);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 0 22px;
+        }
+
+        /* Hero Section */
+        #hero {
+            padding: 120px 0 60px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            letter-spacing: -0.005em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 24px;
+            color: var(--apple-grey);
+            font-weight: 400;
+        }
+
+        /* Projects Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 80px;
+        }
+
+        .card {
+            background: var(--apple-bg);
+            padding: 40px;
+            border-radius: 28px;
+            transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        .card h3 {
+            font-size: 28px;
+            margin: 0 0 10px;
+        }
+
+        /* Buttons Section */
+        .buttons {
+            margin-top: 100px;
+            text-align: center;
+            padding-bottom: 100px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 22px;
+            border-radius: 980px;
+            font-weight: 400;
+            text-decoration: none;
+            margin: 10px;
+            transition: opacity 0.2s ease;
+        }
+
+        .btn-primary { background: #0071e3; color: white; }
+        .btn-dark { background: var(--apple-black); color: white; }
+
+        .btn:hover { opacity: 0.8; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section id="hero">
+            <h1>Leandro</h1>
+            <p class="subtitle">Ingeniería en Sistemas | Futuro PhD en IA</p>
+        </section>
+
+        <section class="grid">
+            <div class="card">
+                <h3>Python</h3>
+                <p>Gestión de Impacto Ambiental. Scrapping y base de datos SQLite.</p>
+            </div>
+            <div class="card">
+                <h3>C++</h3>
+                <p>Algoritmos avanzados y estructuras de datos de la UTN.</p>
+            </div>
+            <div class="card">
+                <h3>Arduino</h3>
+                <p>Lógica de control y automatización mediante sistemas embebidos.</p>
+            </div>
+        </section>
+
+        <section class="buttons">
+            <a href="TU_LINK_LINKEDIN" class="btn btn-primary">LinkedIn</a>
+            <a href="mailto:lquintela@frba.utn.edu.ar" class="btn btn-dark">Email</a>
+        </section>
+    </div>
+
+</body>
+</html>
