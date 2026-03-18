@@ -83,15 +83,30 @@
 
         /* 1. Definimos la transición en el H3 base para que el cambio de color sea suave.*/
 
+/* 1. Modificamos la base de todos los h3 */
         .card h3 {
             font-size: 28px;
             margin: 0 0 10px;
-            transition: color 0.3s ease;            /*Si no se pone esto, el color cambia "de golpe" */
+            /* Cambiamos 'color' por 'all' para que la transición 
+               también afecte al fondo y al recorte del texto */
+            transition: all 0.3s ease; 
         }
         
-        /* 2. Cuando el padre 'card-python' está en hover, buscá su h3 y cambiale el color al de tu badge (#3776AB) */
+        /* 2. El nuevo efecto para Python (Gradiente Diagonal) */
         .card-python:hover h3 {
-            color: #3776AB;
+            /* Colores oficiales de Python en diagonal */
+            background: linear-gradient(135deg, #306998 50%, #FFE873 50%);
+            
+            /* Recorte de fondo al texto */
+            -webkit-background-clip: text;
+            background-clip: text;
+            
+            /* Hacemos el texto transparente para que se vea el fondo */
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            
+            /* Agregamos una sombra muy sutil para que no pierda legibilidad */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
         }
 
         /* 3. Cuando el padre 'card-cpp' está en hover, buscá su h3 y usá su color (#00599C) */
