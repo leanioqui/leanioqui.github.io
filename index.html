@@ -10,6 +10,10 @@
             --apple-black: #1d1d1f;
             --apple-grey: #86868b;
             --apple-bg: #f5f5f7;
+            --py-blue: #306998;
+            --py-yellow: #FFD43B;
+            --cpp-blue: #00599C;
+            --arduino-blue: #00979D;
         }
 
         body {
@@ -23,7 +27,13 @@
             /* Suavizado de tipografía para pantallas de alta densidad (Retina) */
             -webkit-font-smoothing: antialiased;
         }
-
+        
+        .header-visual {
+            width: 100%;
+            height: 8px; /* Una línea sutil de identidad */
+            background: linear-gradient(90deg, var(--py-blue) 50%, var(--py-yellow) 50%);
+        }
+        
         .container {
             max-width: 980px; /* Ancho estándar de las landing pages de Apple */
             margin: 0 auto;
@@ -31,7 +41,7 @@
         }
 
         #hero {
-            padding: 120px 0 60px;
+            padding: 80px 0 60px;
             text-align: center;
         }
 
@@ -48,6 +58,7 @@
             font-weight: 400;
         }
 
+        /*Proyectos*/
         /* GRID: El cerebro del diseño responsive */
         .grid {
             display: grid;
@@ -97,7 +108,7 @@
         /* 2. El nuevo efecto para Python (Gradiente Diagonal) */
         .card-python:hover h3 {
             /* Colores oficiales de Python en diagonal */
-            background: linear-gradient(135deg, #306998 50%, #FFD43B 50%);
+            background: linear-gradient(135deg, var(--py-blue) 50%, var(--py-yellow) 50%);
             
             /* Recorte de fondo al texto */
             -webkit-background-clip: text;
@@ -118,12 +129,12 @@
 
         /* 3. Cuando el padre 'card-cpp' está en hover, buscá su h3 y usá su color (#00599C) */
         .card-cpp:hover h3 {
-            color: #00599C;
+            color: var(--cpp-blue);
         }
 
         /* 4. Cuando el padre 'card-arduino' está en hover, buscá su h3 y usá su color (#00979D) */
         .card-arduino:hover h3 {
-            color: #00979D;
+            color: var(--arduino-blue);
         }
 
         /* SECCIÓN DE BOTONES */
@@ -152,6 +163,8 @@
 </head>
 <body>
 
+    <div class="header-visual"></div>
+
     <div class="container">
         <section id="hero">
             <h1>Leandro Quintela</h1>
@@ -174,7 +187,7 @@
         </section>
 
         <section class="buttons">
-            <a href="https://www.linkedin.com/in/leandro-nicol%C3%A1s-quintela-2064b7231/" class="btn btn-primary">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/leandro-nicol%C3%A1s-quintela-2064b7231/" class="btn btn-primary" target="_blank">LinkedIn</a>
             <a href="mailto:quintela.leandro@gmail.com" class="btn btn-dark">Email</a>
         </section>
     </div>
